@@ -6,17 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/static/bootstrap.min.css" />
   <link rel="stylesheet" href="/static/css/register.css">
-  <title>Register</title>
+  <title>회원가입</title>
 </head>
 <body>
   <div class="container">
     <div class="row mt-5">
-      <div class="col-12 text-center"><h1>회원 가입</h1></div>
+      <div class="col-12 text-center"><h1>회원가입</h1></div>
     </div>
   </div>
   <div class="row mt-5">
     <div class="col-12">
       {{error}}
+    </div>
+    <div class="col-12">
+      {{success}}
     </div>
   </div>
   <div class="container">
@@ -26,15 +29,15 @@
           {% csrf_token %}
             <div class="form-group">
               <label for="username">Username</label>
-              <input type="text" class="form-control" id="eusername" placeholder="username" name="username">        
+              <input type="text" class="form-control" id="username" placeholder="username" name="username">        
             </div>
             <div class="form-group">
-              <label for="email">Email address</label>
-              <input type="email" class="form-control" id="email" placeholder="email" name="email" >                  
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="password" name="password">
             </div>
             <div class="form-group">
               <label for="re-password">Re-Password</label>
-              <input type="password" class="form-control" id="password" placeholder="re-password" name="re-password">
+              <input type="password" class="form-control" id="re-password" placeholder="re-password" name="re-password">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>

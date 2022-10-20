@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/css/register.css">  
+    <title>{{name}}</title>
+</head>
+<body>
+    <div class="row mt-5">
+        <div class="col-12">{{member}}님 안녕하세요</div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12">{{visit_count}}번 방문하셨네요</div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12">아래 동그라미는 {{member}}님의 정치색입니다</div>
+    </div>
+    {% block css %}
+        <div class="wrapper">
+            <div class="circle" style={{color}}>{{color}}</div>
+        </div>        
+    {% endblock css %}
+</body>
+</html>
