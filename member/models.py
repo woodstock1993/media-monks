@@ -40,7 +40,7 @@ class Member(models.Model):
     password    = models.CharField(max_length=128, verbose_name='password', null=False)
     created_at  = models.DateTimeField(auto_now_add=True, verbose_name='가입날짜')
     updated_at  = models.DateTimeField(auto_now=True, verbose_name='마지막수정일')
-    visit_count = models.IntegerField(verbose_name='방문 횟수', default=1)
+    visit_count = models.IntegerField(verbose_name='방문 횟수', default=0)
     color = models.CharField(max_length=128, verbose_name='color', null=True, default='')
 
     def __str__(self):
