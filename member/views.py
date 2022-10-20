@@ -13,9 +13,11 @@ def register(request):
 		re_password = request.POST.get('re_password', None)
 
 	res_data = {}
-
 	if not (username and email and password and re_password):
 		res_data['error'] = '모든 값을 입력하세요'
+	elif password != re_password:
+		res_data['error'] = '비밀번호가 다릅니다'
+
 	if password != re_password:
 		res_data['error'] = '비밀번호가 다릅니다.'
 	else:
