@@ -43,7 +43,9 @@ $ python manage.py runserver
 ```
 
 ### How to Test
+```
 $ /member/register url 가서 회원가입
 $ /member/login url 가서 로그인
 $ /member/logout url 가서 로그아웃
 $ /member/login url 가서 다시 로그인
+```
